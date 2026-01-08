@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demandez un devis personnalisé pour vos besoins en produits industriels et chimiques. Formulaire de demande de devis ACIC-SN.">
+    <title>Demande de devis - ACIC-SN</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo-link">
+                <img src="LOGO ACIC-SN .png" alt="ACIC-SN Logo" class="logo">
+            </a>
+            <nav>
+                <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="produits.html">Produits</a></li>
+                    <li><a href="domaines.html">Domaines d'intervention</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="marques.html">Marques & Partenaires</a></li>
+                    <li><a href="actualites.html">Actualités</a></li>
+                    <li><a href="agence.html">Agence</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="devis.html" class="btn btn-primary">Demande de devis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Accueil</a> / Demande de devis
+            </div>
+            <h1>Demande de devis</h1>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <p>Remplissez le formulaire ci-dessous pour recevoir un devis personnalisé adapté à vos besoins. Notre équipe vous répondra dans les plus brefs délais.</p>
+                </div>
+
+                <form id="devis-form" class="card">
+                    <h2 style="margin-bottom: 2rem;">Informations de contact</h2>
+                    
+                    <div class="form-group">
+                        <label for="entreprise-devis">Nom de l'entreprise *</label>
+                        <input type="text" id="entreprise-devis" name="entreprise" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contact-devis">Nom du contact *</label>
+                        <input type="text" id="contact-devis" name="contact" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telephone-devis">Téléphone *</label>
+                        <input type="tel" id="telephone-devis" name="telephone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email-devis">Email *</label>
+                        <input type="email" id="email-devis" name="email" required>
+                    </div>
+
+                    <h2 style="margin-top: 3rem; margin-bottom: 2rem;">Détails de la demande</h2>
+
+                    <div class="form-group">
+                        <label for="domaine-activite">Domaine d'activité *</label>
+                        <select id="domaine-activite" name="domaine-activite" required>
+                            <option value="">Sélectionnez un domaine</option>
+                            <option value="industrie">Industrie</option>
+                            <option value="collectivites">Collectivités</option>
+                            <option value="agriculture">Agriculture</option>
+                            <option value="transport-terrestre">Transport terrestre</option>
+                            <option value="transport-maritime">Transport maritime</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="produits-concernes">Produits concernés *</label>
+                        <select id="produits-concernes" name="produits-concernes" required>
+                            <option value="">Sélectionnez un produit</option>
+                            <option value="produits-chimiques">Produits chimiques industriels</option>
+                            <option value="lubrifiants-industriels">Lubrifiants industriels</option>
+                            <option value="graisses-industrielles">Graisses industrielles</option>
+                            <option value="lubrifiants-vehicules">Lubrifiants véhicules</option>
+                            <option value="detergents">Détergents & produits d'entretien</option>
+                            <option value="aerosols">Aérosols & solvants</option>
+                            <option value="batteries">Batteries GLOBAL</option>
+                            <option value="filtres">Filtres DONALDSON</option>
+                            <option value="pneus">Pneus d'engins (BKT, TRIANGLE, KUMHO)</option>
+                            <option value="multiple">Plusieurs produits</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message-devis">Message / Détails de votre demande *</label>
+                        <textarea id="message-devis" name="message" required placeholder="Décrivez vos besoins, quantités souhaitées, délais, ou toute autre information pertinente..."></textarea>
+                    </div>
+
+                    <div style="margin-top: 2rem; padding: 1rem; background-color: var(--gray-light); border-radius: 4px;">
+                        <p style="font-size: 0.9rem; margin: 0;"><strong>Note :</strong> Les champs marqués d'un astérisque (*) sont obligatoires. Nous vous contacterons rapidement après réception de votre demande.</p>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 2rem; font-size: 1.1rem; padding: 1rem;">Envoyer la demande de devis</button>
+                </form>
+
+                <div class="card" style="margin-top: 3rem; background-color: var(--blue-primary); color: var(--white);">
+                    <h3 style="color: var(--white);">Besoin d'aide ?</h3>
+                    <p style="color: var(--white);">Notre équipe est à votre disposition pour vous accompagner dans votre demande. N'hésitez pas à nous contacter directement par email : <a href="mailto:asicsn@live.fr" style="color: var(--yellow-accent);">asicsn@live.fr</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background-color: var(--gray-light);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 class="text-center">Pourquoi choisir ACIC-SN ?</h2>
+                <div class="cards-grid" style="margin-top: 2rem;">
+                    <div class="card fade-in-up">
+                        <div class="card-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Devis rapide</h3>
+                        <p>Nous vous répondons sous 24-48h avec un devis détaillé et personnalisé.</p>
+                    </div>
+                    <div class="card fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="card-icon">
+                            <i class="fas fa-tags"></i>
+                        </div>
+                        <h3>Prix compétitifs</h3>
+                        <p>Des tarifs compétitifs grâce à nos partenariats privilégiés avec les fabricants.</p>
+                    </div>
+                    <div class="card fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="card-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3>Conseil personnalisé</h3>
+                        <p>Notre équipe vous conseille pour choisir les produits les plus adaptés.</p>
+                    </div>
+                    <div class="card fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="card-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Service fiable</h3>
+                        <p>Un service client réactif et professionnel à chaque étape.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ACIC-SN</h3>
+                    <p>Votre partenaire de confiance pour solutions industrielles et chimiques en Côte d'Ivoire.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="a-propos.html">À propos</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Koumassi – Terminus 11</p>
+                    <p>Email: <a href="mailto:asicsn@live.fr">asicsn@live.fr</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Informations</h3>
+                    <ul>
+                        <li><a href="domaines.html">Domaines d'intervention</a></li>
+                        <li><a href="marques.html">Marques & Partenaires</a></li>
+                        <li><a href="agence.html">Agence</a></li>
+                        <li><a href="devis.html">Demande de devis</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 ACIC-SN. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bouton WhatsApp flottant -->
+    <a href="https://wa.me/2250707053900?text=Bonjour,%20je%20souhaite%20contacter%20le%20support%20client%20ACIC-SN" 
+       class="whatsapp-float" 
+       target="_blank" 
+       rel="noopener noreferrer"
+       aria-label="Contacter le support client sur WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Support client</span>
+    </a>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
