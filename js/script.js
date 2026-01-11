@@ -1,5 +1,40 @@
 // ACIC-SN - Scripts JavaScript
 
+// Gestion du loader - Durée minimale de 3 secondes
+(function() {
+    const loader = document.getElementById('loader');
+    const minDisplayTime = 3000; // 3 secondes
+    const startTime = Date.now();
+    let pageLoaded = false;
+    
+    function hideLoader() {
+        if (loader && pageLoaded) {
+            const elapsedTime = Date.now() - startTime;
+            const remainingTime = Math.max(0, minDisplayTime - elapsedTime);
+            
+            setTimeout(function() {
+                loader.classList.add('hidden');
+                setTimeout(function() {
+                    loader.style.display = 'none';
+                }, 500);
+            }, remainingTime);
+        }
+    }
+    
+    window.onload = function () {
+        pageLoaded = true;
+        hideLoader();
+    };
+    
+    // Sécurité : masquer après 10 secondes maximum
+    setTimeout(function() {
+        if (loader && loader.style.display !== 'none') {
+            pageLoaded = true;
+            hideLoader();
+        }
+    }, 10000);
+})();
+
 // Menu mobile et détection de la page active
 document.addEventListener('DOMContentLoaded', function() {
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
