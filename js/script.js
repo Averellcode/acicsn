@@ -1,8 +1,24 @@
 // ACIC-SN - Scripts JavaScript
 
-// Gestion du loader - Durée minimale de 3 secondes
+// Gestion du loader - Affichage uniquement lors de la première visite
 (function() {
     const loader = document.getElementById('loader');
+    const hasVisited = localStorage.getItem('acic-sn-visited');
+    
+    // Si l'utilisateur a déjà visité le site, s'assurer que le loader est masqué
+    if (hasVisited) {
+        if (loader) {
+            loader.style.display = 'none';
+        }
+        return;
+    }
+    
+    // S'assurer que le loader est visible pour la première visite
+    if (loader) {
+        loader.style.display = 'flex';
+    }
+    
+    // Première visite : afficher le loader
     const minDisplayTime = 3000; // 3 secondes
     const startTime = Date.now();
     let pageLoaded = false;
@@ -16,6 +32,8 @@
                 loader.classList.add('hidden');
                 setTimeout(function() {
                     loader.style.display = 'none';
+                    // Marquer que l'utilisateur a visité le site
+                    localStorage.setItem('acic-sn-visited', 'true');
                 }, 500);
             }, remainingTime);
         }

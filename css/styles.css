@@ -46,6 +46,11 @@
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
 }
 
+/* Masquer le loader si l'utilisateur a déjà visité (évite le flash) */
+#loader[data-visited="true"] {
+    display: none !important;
+}
+
 #loader.hidden {
     opacity: 0;
     visibility: hidden;
